@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "nav main";
+}
+
+
+#nav-bar{
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 1fr;
+}
+ 
+#nav-bar header{
+    text-align: center;
+    position: sticky;
+    height: 930px;
+    top: 0;
+} 
+
+#nav-bar header h1{
+    font-size: 30px;
+    padding: 5%;
+    margin: 0;
+}
+
+#nav-bar header a{
+    border-top: 1px solid black;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    padding: 10px;
+}
+
+
+#main-doc{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-doc .main-section{
+    margin: 10px 10px 10px 10px;
+    align-self: center;
+}
