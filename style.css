@@ -2,34 +2,29 @@ body{
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 240px 3fr;
     grid-template-rows: 1fr;
     grid-template-areas: "nav main";
 }
 
 
-#nav-bar{
+#navbar{
+    text-align: center;
     grid-area: nav;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    position: fixed;
+    height: 100%;
+    border-right: 1px solid black;
     width: 1fr;
 }
  
-#nav-bar header{
+#navbar header{
     text-align: center;
-    position: sticky;
-    height: 930px;
     top: 0;
 } 
 
-#nav-bar header h1{
-    font-size: 30px;
-    padding: 5%;
-    margin: 0;
-}
-
-#nav-bar header a{
+#navbar header a{
     border-top: 1px solid black;
     text-decoration: none;
     color: black;
@@ -42,9 +37,55 @@ body{
     grid-area: main;
     display: flex;
     flex-direction: column;
+    margin: 0 2em;
+    margin-bottom: 10em;
 }
 
 #main-doc .main-section{
-    margin: 10px 10px 10px 10px;
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-doc .main-section header{
+    font-size: 35px;
+    margin-top: 1em;
+    font-weight: normal;
+}
+
+#main-doc .main-section p{
+    line-height: 1.5em;
+    margin: 10px 2em;
+}
+
+#main-doc .main-section ul{
+    margin: 0 4em;
+}
+
+#main-doc .main-section ul li{
+    margin-top: 20px;
+}
+
+#main-doc .main-section code{
+    line-height: 1.5em;
+    padding: 20px;
+    margin: 0 4em;
+    background-color: #F7F7F7;
+    border-radius: 5px;
+}
+
+@media (max-width: 700px){
+    body{
+        display: block;
+    }
+    #navbar{
+        border: none;
+        position: relative;
+    }
+    #navbar header{
+        border: 1px solid black;
+        height: 200px;
+        overflow-y: scroll;
+    }
+
+
 }
